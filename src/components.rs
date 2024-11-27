@@ -1,4 +1,4 @@
-use bevy::prelude::*;
+se bevy::prelude::*;
 use bevy::math::Vec2;
 
 #[derive(Component)]
