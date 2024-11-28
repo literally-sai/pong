@@ -1,4 +1,4 @@
-se bevy::prelude::*;
+use bevy::prelude::*;
 use bevy::math::Vec2;
 
 #[derive(Component)]
@@ -24,7 +24,7 @@ pub struct Paddle;
 pub struct Boundary;
 
 #[derive(Component)]
-pub struct Positon(pub Vec2);
+pub struct Position(pub Vec2);
 
 #[derive(Component)]
 pub struct Velocity(pub Vec2);
@@ -40,3 +40,6 @@ pub struct Score {
     pub player1: u32,
     pub player2: u32,
 }
+
+#[derive(Component)]
+pub struct Ball;

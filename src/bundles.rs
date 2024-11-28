@@ -17,7 +17,7 @@ impl BallBundle {
             ball: Ball,
             shape: Shape(Vec2::new(BALL_SIZE, BALL_SIZE)),
             velocity: Velocity(Vec2::new(x, y)),
-            positon: Position(Vec2::new(0.0, 0.0))
+            position: Position(Vec2::new(0.0, 0.0))
         }
     }
 }
@@ -30,7 +30,7 @@ pub struct PaddleBundle {
     pub velocity: Velocity,
 }
 
-impl Paddlebundle {
+impl PaddleBundle {
     pub fn new(x: f32, y: f32) -> Self {
         Self {
             paddle: Paddle,
@@ -43,7 +43,7 @@ impl Paddlebundle {
 
 #[derive(Bundle)]
 pub struct BoundaryBundle {
-    pub boundary: boundary,
+    pub boundary: Boundary,
     pub shape: Shape,
     pub position: Position,
 }
