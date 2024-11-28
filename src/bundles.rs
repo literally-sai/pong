@@ -1,7 +1,7 @@
-use bevy::prelude::*;
-use bevy::math::Vec2;
 use crate::components::*;
 use crate::constants::*;
+use bevy::math::Vec2;
+use bevy::prelude::*;
 
 #[derive(Bundle)]
 pub struct BallBundle {
@@ -17,7 +17,7 @@ impl BallBundle {
             ball: Ball,
             shape: Shape(Vec2::new(BALL_SIZE, BALL_SIZE)),
             velocity: Velocity(Vec2::new(x, y)),
-            position: Position(Vec2::new(0.0, 0.0))
+            position: Position(Vec2::new(0.0, 0.0)),
         }
     }
 }
@@ -53,7 +53,7 @@ impl BoundaryBundle {
         Self {
             boundary: Boundary,
             shape: Shape(Vec2::new(width, BOUNDARY_HEIGHT)),
-            position: Position(Vec2::new(x, y))
+            position: Position(Vec2::new(x, y)),
         }
     }
 }

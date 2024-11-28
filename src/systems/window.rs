@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use bevy::math::Vec3;
+use bevy::prelude::*;
 
 use crate::constants;
 
@@ -13,7 +13,7 @@ pub fn create_window() -> WindowPlugin {
     }
 }
 
-pub fn spawn_dotted_lines(mut commands: Commands) {
+pub fn spawn_dotted_line(mut commands: Commands) {
     let dot_color = Color::srgb(1.0, 1.0, 1.0);
     let dot_size = Vec3::new(5.0, 20.0, 1.0);
     let gap_size = 15.0;
@@ -26,9 +26,13 @@ pub fn spawn_dotted_lines(mut commands: Commands) {
                 ..default()
             },
             transform: Transform {
-                    translation: Vec3::new(0.0, i as f32 * (dot_size.y + gap_size) - constants::WINDOW_HEIGHT / 2.0, 0.0),
-                    scale: dot_size,
-                    ..default()
+                translation: Vec3::new(
+                    0.0,
+                    i as f32 * (dot_size.y + gap_size) - constants::WINDOW_HEIGHT / 2.0,
+                    0.0,
+                ),
+                scale: dot_size,
+                ..default()
             },
             ..default()
         });

@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use bevy::math::Vec2;
+use bevy::prelude::*;
 
 #[derive(Component)]
 pub struct Player1;
@@ -14,7 +14,8 @@ pub struct Player1Score;
 pub struct Player2Score;
 
 pub enum Scorer {
-    Player1, Player2,
+    Player1,
+    Player2,
 }
 
 #[derive(Component)]
@@ -32,7 +33,7 @@ pub struct Velocity(pub Vec2);
 #[derive(Component)]
 pub struct Shape(pub Vec2);
 
-#[derive(Component)]
+#[derive(Event)]
 pub struct Scored(pub Scorer);
 
 #[derive(Resource, Default)]
